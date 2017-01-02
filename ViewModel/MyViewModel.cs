@@ -50,31 +50,72 @@ namespace PartnersMatcher.ViewModel
             switch (type)
             {
                 case "apartment":
-                    filterCity(city,model.ActivityList[type]);
+                    filterCity(city,model.ActivityList[type],type);
                     break;
                 case "sport":
-                    filterCity(city, model.ActivityList[type]);
+                    filterCity(city, model.ActivityList[type],type);
                     break;
                 case "date":
-                    filterCity(city, model.ActivityList[type]);
+                    filterCity(city, model.ActivityList[type],type);
                     break;
                 case "trip":
-                    filterCity(city, model.ActivityList[type]);
+                    filterCity(city, model.ActivityList[type],type);
                     break;
                 default:
                     break;
             }
         }
 
-        private void filterCity(string city, List<Activity> activities)
+        private void filterCity(string city, List<Activity> activities, string type)
         {
-            List<Activity> dupAct = activities;
-            foreach (Activity activity in dupAct)
+            switch (type)
             {
-                if (city.ToLower() != activity.Location.ToLower())
-                {
-                    activities.Remove(activity);
-                }
+                case "apartment":
+                    List<Activity> filteredApts = new List<Activity>();
+                    foreach (ApartmentActivity activity in activities)
+                    {
+                        if (city.ToLower() == activity.Location.ToLower())
+                        {
+                            filteredApts.Add(activity);
+                        }
+                    }
+                    ApartmentActivity = filteredApts;
+                    break;
+                case "sport":
+                    List<Activity> filteredSports = new List<Activity>();
+                    foreach (SportActivity activity in activities)
+                    {
+                        if (city.ToLower() == activity.Location.ToLower())
+                        {
+                            filteredSports.Add(activity);
+                        }
+                    }
+                    SportActivity = filteredSports;
+                    break;
+                case "date":
+                    List<Activity> filteredDate = new List<Activity>();
+                    foreach (DateActivity activity in activities)
+                    {
+                        if (city.ToLower() == activity.Location.ToLower())
+                        {
+                            filteredDate.Add(activity);
+                        }
+                    }
+                    DateActivity = filteredDate;
+                    break;
+                case "trip":
+                    List<Activity> filteredTrips = new List<Activity>();
+                    foreach (ApartmentActivity activity in activities)
+                    {
+                        if (city.ToLower() == activity.Location.ToLower())
+                        {
+                            filteredTrips.Add(activity);
+                        }
+                    }
+                    TripActivity = filteredTrips;
+                    break;
+                default:
+                    break;
             }
         }
 
