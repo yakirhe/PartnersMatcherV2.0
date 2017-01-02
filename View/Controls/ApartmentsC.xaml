@@ -40,10 +40,10 @@
         </Grid>
         <Button Grid.Row="1" Grid.Column="4" Margin="0 10 5 10" Click="Button_Click">Search</Button>
         <Label HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="5" Foreground="Red" Visibility="Hidden" Name="resultsLbl">Results:</Label>
-        <ListBox Name="activityBox" Grid.Row="3" Grid.ColumnSpan="5" ItemsSource="{Binding ApartmentActivity}" Visibility="Hidden">
+        <ListBox Name="activityBox" Grid.Row="3" Grid.ColumnSpan="5" ItemsSource="{Binding FilteredApts}" Visibility="Hidden">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <local:ApartmentViewC Apartment="{Binding ApartmentActivity}"></local:ApartmentViewC>
+                    <local:ApartmentViewC Apartment="{Binding FilteredApts}"></local:ApartmentViewC>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

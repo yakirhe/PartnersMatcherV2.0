@@ -66,6 +66,8 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
+        public List<Activity> FilteredApts { get; set; }
+
         private void filterCity(string city, List<Activity> activities, string type)
         {
             switch (type)
@@ -79,7 +81,7 @@ namespace PartnersMatcher.ViewModel
                             filteredApts.Add(activity);
                         }
                     }
-                    ApartmentActivity = filteredApts;
+                    FilteredApts = filteredApts;
                     break;
                 case "sport":
                     List<Activity> filteredSports = new List<Activity>();

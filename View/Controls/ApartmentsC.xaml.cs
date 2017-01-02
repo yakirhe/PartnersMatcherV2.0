@@ -45,6 +45,7 @@ namespace PartnersMatcher.View.Controls
                 return;
             }
             vm.filterByLocation(cityBox.SelectedItem.ToString(),"apartment");
+            activityBox.ItemsSource = vm.FilteredApts;
             resultsLbl.Visibility = Visibility.Visible;
             activityBox.Visibility = Visibility.Visible;
         }
