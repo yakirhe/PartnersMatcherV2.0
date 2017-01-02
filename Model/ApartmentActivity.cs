@@ -52,6 +52,7 @@ namespace PartnersMatcher.Model
 
         public ApartmentActivity(string location, double rentalFee, bool petFriendly, bool isKosher, bool isSmokingFriendly, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, location, partners, activityName, type, payments, pendingList)
         {
+            this.location = location;
             this.rentalFee = rentalFee;
             this.petFriendly = petFriendly;
             this.isKosher = isKosher;
