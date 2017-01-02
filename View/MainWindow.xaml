@@ -1,0 +1,28 @@
+﻿<Window
+    x:Class="PartnersMatcher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:PartnersMatcher.View.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PartnersMatcher"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1024"
+    Height="576"
+    mc:Ignorable="d"
+    Closing="Window_Closing">
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="12*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1 0 0 0"></Border>
+        <Grid Name="connectGrid" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBox Name="trigger" TextChanged="trigger_TextChanged" Visibility="Hidden" Grid.Row="1" Text="{Binding Connected}"></TextBox>
+        </Grid>
+    </Grid>
+</Window>
