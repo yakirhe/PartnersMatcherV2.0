@@ -12,6 +12,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="25"></RowDefinition>
             <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -47,5 +48,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button Grid.Row="4" Grid.Column="4" Margin="0 0 10 0" Click="Button_Click_1" Visibility="Hidden" Name="btn">Ask to join</Button>
     </Grid>
 </UserControl>

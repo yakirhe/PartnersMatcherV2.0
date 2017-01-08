@@ -38,18 +38,9 @@ namespace PartnersMatcher.View
             }
             else
             {
-                if (vm.ifUserExist(emailTxt.Text))
-                {
-                    MessageBox.Show("this user already exist ,try again");
-                }
-                else
-                {
-                    vm.addUser(fullNameTxt.Text, emailTxt.Text, dobTxt.Text, passwordTxt.Text, cityTxt.Text, phoneTxt.Text, "f");
-                    
-                    MessageBox.Show("Email was sent to " + emailTxt.Text);
-                    Thread.Sleep(1000);
-                    this.Close();
-                }
+                vm.addUser(fullNameTxt.Text, emailTxt.Text, dobTxt.Text, passwordTxt.Text, cityTxt.Text, phoneTxt.Text, smoking.IsChecked.Value, pet.IsChecked.Value);
+                Thread.Sleep(1000);
+                this.Close();
             }
         }
     }

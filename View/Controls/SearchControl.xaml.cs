@@ -42,17 +42,17 @@ namespace PartnersMatcher.View.Controls
             {
                 case "Sport":
                     activityGrid.Children.Clear();
-                    SportC sport = new SportC();
+                    SportC sport = new SportC(vm);
                     activityGrid.Children.Add(sport);
                     break;
                 case "Trip":
                     activityGrid.Children.Clear();
-                    TripC trip = new TripC();
+                    TripC trip = new TripC(vm);
                     activityGrid.Children.Add(trip);
                     break;
                 case "Date":
                     activityGrid.Children.Clear();
-                    DateC date = new DateC();
+                    DateC date = new DateC(vm);
                     activityGrid.Children.Add(date);
                     break;
                 case "Apartments":

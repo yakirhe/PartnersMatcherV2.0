@@ -99,15 +99,7 @@
             Margin="10"
             Click="Button_Click"
             Content="Submit" />
-        <Grid
-            Grid.Row="1"
-            Grid.RowSpan="6"
-            Grid.Column="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Button Content="Choose photo" />
-        </Grid>
+        <CheckBox Grid.Row="1" Grid.Column="2" Margin="10" Name="smoking">Smoking</CheckBox>
+        <CheckBox Grid.Row="2" Grid.Column="2" Margin="10" Name="pet">I have a pet</CheckBox>
     </Grid>
 </Window>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PartnersMatcher.Model
 {
-    class TripActivity : Activity
+    public class TripActivity : Activity
     {
         #region Properties
         private string destination;
@@ -16,6 +16,15 @@ namespace PartnersMatcher.Model
             get { return destination; }
             set { destination = value; }
         }
+
+        private string region;
+
+        public string Region
+        {
+            get { return region; }
+            set { region = value; }
+        }
+
 
         private string startingDate;
 
@@ -42,12 +51,13 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public TripActivity(string destination, string startingDate, string approximateDuration, bool carNeeded, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, destination, partners, activityName, type, payments, pendingList)
+        public TripActivity(string region, string destination, string startingDate, string approximateDuration, bool carNeeded, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, destination, partners, activityName, type, payments, pendingList)
         {
             this.destination = destination;
             this.startingDate = startingDate;
             this.approximateDuration = approximateDuration;
             this.carNeeded = carNeeded;
+            this.region = region;
         }
     }
 }

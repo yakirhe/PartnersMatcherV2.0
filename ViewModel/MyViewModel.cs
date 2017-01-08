@@ -50,16 +50,16 @@ namespace PartnersMatcher.ViewModel
             switch (type)
             {
                 case "apartment":
-                    filterCity(city,model.ActivityList[type],type);
+                    filterCity(city, model.ActivityList[type], type);
                     break;
                 case "sport":
-                    filterCity(city, model.ActivityList[type],type);
+                    filterCity(city, model.ActivityList[type], type);
                     break;
                 case "date":
-                    filterCity(city, model.ActivityList[type],type);
+                    filterCity(city, model.ActivityList[type], type);
                     break;
                 case "trip":
-                    filterCity(city, model.ActivityList[type],type);
+                    filterCity(city, model.ActivityList[type], type);
                     break;
                 default:
                     break;
@@ -67,6 +67,9 @@ namespace PartnersMatcher.ViewModel
         }
 
         public List<Activity> FilteredApts { get; set; }
+        public List<Activity> FilteredTrips { get; set; }
+        public List<Activity> FilteredDates { get; set; }
+        public List<Activity> FilteredSports { get; set; }
 
         private void filterCity(string city, List<Activity> activities, string type)
         {
@@ -92,7 +95,7 @@ namespace PartnersMatcher.ViewModel
                             filteredSports.Add(activity);
                         }
                     }
-                    SportActivity = filteredSports;
+                    FilteredSports = filteredSports;
                     break;
                 case "date":
                     List<Activity> filteredDate = new List<Activity>();
@@ -103,18 +106,18 @@ namespace PartnersMatcher.ViewModel
                             filteredDate.Add(activity);
                         }
                     }
-                    DateActivity = filteredDate;
+                    FilteredDates = filteredDate;
                     break;
                 case "trip":
                     List<Activity> filteredTrips = new List<Activity>();
-                    foreach (ApartmentActivity activity in activities)
+                    foreach (TripActivity activity in activities)
                     {
-                        if (city.ToLower() == activity.Location.ToLower())
+                        if (city.ToLower() == activity.Region.ToLower())
                         {
                             filteredTrips.Add(activity);
                         }
                     }
-                    TripActivity = filteredTrips;
+                    FilteredTrips = filteredTrips;
                     break;
                 default:
                     break;
@@ -188,19 +191,9 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
-        internal void addUser(string fullName, string email, string dob, string password, string city, string phone, string photo)
+        internal void addUser(string fullName, string email, string dob, string password, string city, string phone, bool smoking, bool pet)
         {
-            model.addUser(fullName, email, dob, password, city, phone, photo);
-        }
-
-        internal bool ifUserExist(string email)
-        {
-            return model.ifUserExist(email);
-        }
-
-        internal void saveUsers()
-        {
-            model.saveUsers();
+            model.addUser(fullName, email, dob, password, city, phone, smoking, pet);
         }
 
         internal bool signIn(string email, string password)

@@ -48,6 +48,17 @@ namespace PartnersMatcher.View.Controls
             activityBox.ItemsSource = vm.FilteredApts;
             resultsLbl.Visibility = Visibility.Visible;
             activityBox.Visibility = Visibility.Visible;
+            btn.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (activityBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("You need to select the activity");
+                return;
+            }
+            MessageBox.Show("You were added to the pending list");
         }
     }
 }

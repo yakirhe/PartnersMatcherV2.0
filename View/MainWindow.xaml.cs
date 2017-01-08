@@ -36,7 +36,7 @@ namespace PartnersMatcher
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            vm.saveUsers();
+            //
         }
 
         private void trigger_TextChanged(object sender, TextChangedEventArgs e)

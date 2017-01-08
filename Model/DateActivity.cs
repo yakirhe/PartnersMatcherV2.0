@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PartnersMatcher.Model
 {
-    class DateActivity : Activity
+    public class DateActivity : Activity
     {
         #region Properties
         private double budget;

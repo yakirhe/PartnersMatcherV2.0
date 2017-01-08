@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PartnersMatcher.Model
 {
-    class SportActivity : Activity
+    public class SportActivity : Activity
     {
         #region Properties
         private string location;
@@ -28,6 +28,7 @@ namespace PartnersMatcher.Model
 
         public SportActivity(string location, string sportType, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, location, partners, activityName, type, payments, pendingList)
         {
+            this.location = location;
             this.sportType = sportType;
         }
     }

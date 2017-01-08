@@ -65,8 +65,28 @@ namespace PartnersMatcher.Model
             set { password = value; }
         }
 
+        private bool smoking;
 
-        public User(string email, string password, string fullName, string dob, string phone, string city, string photo)
+        public bool Smoking
+        {
+            get { return smoking; }
+            set { smoking = value; }
+        }
+
+        private bool pet;
+
+        public bool Pet
+        {
+            get { return pet; }
+            set { pet = value; }
+        }
+
+        public User()
+        {
+
+        }
+
+        public User(string email, string password, string fullName, string dob, string phone, string city, bool smoking, bool pet)
         {
             this.email = email;
             this.password = password;
@@ -74,7 +94,8 @@ namespace PartnersMatcher.Model
             this.dob = dob;
             this.phone = phone;
             this.city = city;
-            this.photo = photo;
+            this.smoking = smoking;
+            this.pet = pet;
         }
     }
 }

@@ -100,6 +100,9 @@
     <Compile Include="View\Controls\DateC.xaml.cs">
       <DependentUpon>DateC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\DateViewC.xaml.cs">
+      <DependentUpon>DateViewC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\loggedIn.xaml.cs">
       <DependentUpon>loggedIn.xaml</DependentUpon>
     </Compile>
@@ -109,8 +112,14 @@
     <Compile Include="View\Controls\SportC.xaml.cs">
       <DependentUpon>SportC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\SportViewC.xaml.cs">
+      <DependentUpon>SportViewC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\TripC.xaml.cs">
       <DependentUpon>TripC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\TripViewC.xaml.cs">
+      <DependentUpon>TripViewC.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SignUpW.xaml.cs">
       <DependentUpon>SignUpW.xaml</DependentUpon>
@@ -124,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Controls\DateC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\DateViewC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,7 +156,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Controls\SportViewC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Controls\TripC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\TripViewC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
