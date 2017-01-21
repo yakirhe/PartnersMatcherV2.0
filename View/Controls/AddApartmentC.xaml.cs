@@ -40,8 +40,18 @@ namespace PartnersMatcher.View.Controls
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string location = locationTbox.Text;
-
+            string rentalFee = rentalFeeTbox.Text;
+            if (rentalFee != "")
+            {
+                checkIfNumber(rentalFee);
+            }
+            int numOfPartners = Int32.Parse(numberOfPartnersCbox.SelectedItem.ToString());
             //vm.addActivity();
+        }
+
+        private void checkIfNumber(string rentalFee)
+        {
+
         }
     }
 }
