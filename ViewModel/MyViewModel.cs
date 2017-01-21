@@ -124,6 +124,12 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
+        internal void logOut()
+        {
+            Connected = false;
+            VM_UserConnected = null;
+        }
+
         private List<Activity> dateActivity;
 
         public List<Activity> DateActivity
@@ -157,6 +163,16 @@ namespace PartnersMatcher.ViewModel
             {
                 tripActivity = value;
                 notifyPropertyChanged("TripActivity");
+            }
+        }
+
+        private string selection;
+
+        public string Selection
+        {
+            get { return selection; }
+            set { selection = value;
+                notifyPropertyChanged("Selection");
             }
         }
 

@@ -24,14 +24,25 @@ namespace PartnersMatcher
     {
         private MyViewModel vm;
         SignC connectC;
+        SideMenuC sm;
+        loggedIn li;
 
         public MainWindow()
         {
             InitializeComponent();
             vm = new MyViewModel(new Model.MyModel());
+            addSideMenu();
             this.DataContext = vm;
             connectC = new SignC(vm);
             connectGrid.Children.Add(connectC);
+        }
+
+        private void addSideMenu()
+        {
+            sm = new SideMenuC(vm);
+            Grid.SetRow(sm, 1);
+            connectGrid.Children.Add(sm);
+            sm.Visibility = Visibility.Hidden;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -44,10 +55,38 @@ namespace PartnersMatcher
             if (trigger.Text.ToLower() == "true")
             {
                 connectC.Visibility = Visibility.Hidden;
-                loggedIn li = new loggedIn(vm.VM_UserConnected);
-                SearchControl sc = new SearchControl(vm);
-                mainGrid.Children.Add(sc);
+                li = new loggedIn(vm.VM_UserConnected);
                 connectGrid.Children.Add(li);
+                sm.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void sideMenuWasPressed(object sender, TextChangedEventArgs e)
+        {
+            switch (sideMenuSelected.Text)
+            {
+                case "1":
+                    SearchControl sc = new SearchControl(vm);
+                    mainPanel.Children.Clear();
+                    mainPanel.Children.Add(sc);
+                    //search activity
+                    break;
+                case "2":
+                    //add activity
+                    mainPanel.Children.Clear();
+                    AddActivityC aac = new AddActivityC(vm);
+                    mainPanel.Children.Add(aac);
+                    break;
+                case "3":
+                    mainPanel.Children.Clear();
+                    vm.logOut();
+                    sm.Visibility = Visibility.Hidden;
+                    li.Visibility = Visibility.Hidden;
+                    connectC.Visibility = Visibility.Visible;
+                    //log out
+                    break;
+                default:
+                    break;
             }
         }
     }

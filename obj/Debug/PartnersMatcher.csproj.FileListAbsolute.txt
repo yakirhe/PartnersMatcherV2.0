@@ -1,0 +1,119 @@
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\PartnersMatcher.exe.config
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\PartnersMatcher.exe
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\PartnersMatcher.pdb
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\View\MainWindow.g.cs
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\App.g.cs
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher_MarkupCompile.cache
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher_MarkupCompile.lref
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\View\MainWindow.baml
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.g.resources
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.Properties.Resources.resources
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.exe
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.pdb
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SignC.g.cs
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SignC.baml
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\View\SignUpW.g.cs
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\View\SignUpW.baml
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\Model\PartnerMatcherDB.mdf
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\Model\PartnerMatcherDB_log.ldf
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\PartnerMatcherDB.mdf
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\PartnerMatcherDB_log.ldf
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.dll
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.xml
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\daniel\Source\Workspaces\MyFirstProject\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher_Content.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\PartnersMatcher.exe.config
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.exe
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.pdb
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\PartnersMatcher.exe
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\PartnersMatcher.pdb
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.dll
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.xml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SignC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\MainWindow.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\SignUpW.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\App.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher_MarkupCompile.cache
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher_MarkupCompile.lref
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SignC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\MainWindow.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\SignUpW.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.g.resources
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.Properties.Resources.resources
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\loggedIn.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\loggedIn.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SearchControl.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SearchControl.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\ApartmentsC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\DateC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SportC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\TripC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\ApartmentsC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\DateC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\SportC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\TripC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\ApartmentViewC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcher\obj\Debug\View\Controls\ApartmentViewC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\PartnersMatcher.exe.config
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher.exe
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher.pdb
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\PartnersMatcher.exe
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\PartnersMatcher.pdb
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\EntityFramework.dll
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\EntityFramework.xml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher.csprojResolveAssemblyReference.cache
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\ApartmentsC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\ApartmentViewC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\DateC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\loggedIn.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SearchControl.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SignC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SportC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\TripC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\MainWindow.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\SignUpW.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\App.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher_MarkupCompile.cache
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher_MarkupCompile.lref
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\ApartmentsC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\ApartmentViewC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\DateC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\loggedIn.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SearchControl.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SignC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SportC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\TripC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\MainWindow.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\SignUpW.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher.g.resources
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher.Properties.Resources.resources
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\PartnersMatcher.csproj.GenerateResource.Cache
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\TripViewC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\TripViewC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\DateViewC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\DateViewC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SportViewC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SportViewC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SideMenuC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\SideMenuC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddActivityC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddActivityC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddApartmentC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddDateC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddSportC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddTripC.g.cs
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddApartmentC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddDateC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddSportC.baml
+C:\Users\YAKIR HERSHKOVIZ\Desktop\PartnersMatcher\PartnersMatcherV2.0\obj\Debug\View\Controls\AddTripC.baml

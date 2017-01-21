@@ -91,6 +91,21 @@
     <Compile Include="Model\SportActivity.cs" />
     <Compile Include="Model\TripActivity.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="View\Controls\AddActivityC.xaml.cs">
+      <DependentUpon>AddActivityC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AddApartmentC.xaml.cs">
+      <DependentUpon>AddApartmentC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AddDateC.xaml.cs">
+      <DependentUpon>AddDateC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AddSportC.xaml.cs">
+      <DependentUpon>AddSportC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AddTripC.xaml.cs">
+      <DependentUpon>AddTripC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\ApartmentsC.xaml.cs">
       <DependentUpon>ApartmentsC.xaml</DependentUpon>
     </Compile>
@@ -109,6 +124,9 @@
     <Compile Include="View\Controls\SearchControl.xaml.cs">
       <DependentUpon>SearchControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\SideMenuC.xaml.cs">
+      <DependentUpon>SideMenuC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\SportC.xaml.cs">
       <DependentUpon>SportC.xaml</DependentUpon>
     </Compile>
@@ -124,6 +142,26 @@
     <Compile Include="View\SignUpW.xaml.cs">
       <DependentUpon>SignUpW.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Controls\AddActivityC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\AddApartmentC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\AddDateC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\AddSportC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\AddTripC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Controls\ApartmentsC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Controls\SearchControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\SideMenuC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

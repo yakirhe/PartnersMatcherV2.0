@@ -16,7 +16,9 @@
             <ColumnDefinition Width="30*" />
             <ColumnDefinition Width="12*" />
         </Grid.ColumnDefinitions>
+        <Grid Name="mainPanel"></Grid>
         <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1 0 0 0"></Border>
+            <TextBox Name="sideMenuSelected" Visibility="Hidden" Text="{Binding Selection}" TextChanged="sideMenuWasPressed"></TextBox>
         <Grid Name="connectGrid" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />

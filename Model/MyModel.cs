@@ -121,38 +121,6 @@ namespace PartnersMatcher.Model
             string fullPath = curPath + relPath;
             //connect to db
             dbConnection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fullPath + "; Persist Security Info=False");
-            //checkRecords();
-            //insertRecord();
-        }
-
-        private void insertRecord()
-        {
-            dbConnection.Open();
-            string sqlQuery = "INSERT INTO Users ([Email], [Password], [Full name], [Dob], [Phone], [City], [Smoking], [Pet])" + " VALUES (@Email,@Password,@Fullname,@Dob,@Phone,@City,@Smoking,@Pet)";
-            OleDbCommand command = new OleDbCommand(sqlQuery, dbConnection);
-            command.Parameters.AddWithValue("@Username", "dsf");
-            command.Parameters.AddWithValue("@Password", "fgd");
-            command.Parameters.AddWithValue("@Fullname", "dfg");
-            command.Parameters.AddWithValue("@Dob", "dfg");
-            command.Parameters.AddWithValue("@Phone", "sgs");
-            command.Parameters.AddWithValue("@City", "fgd");
-            command.Parameters.AddWithValue("@Smoking", true);
-            command.Parameters.AddWithValue("@Pet", false);
-            command.ExecuteNonQuery();
-            dbConnection.Close();
-        }
-
-        private void checkRecords()
-        {
-            dbConnection.Open();
-            string query = "SELECT * FROM Users";
-            OleDbCommand cmd = new OleDbCommand(query, dbConnection);
-            OleDbDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                MessageBox.Show(reader.GetString(0));
-            }
-            dbConnection.Close();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
