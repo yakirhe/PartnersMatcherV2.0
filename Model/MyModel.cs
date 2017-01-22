@@ -113,6 +113,15 @@ namespace PartnersMatcher.Model
             #endregion
         }
 
+        public void addActivity(int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
+        {
+            switch (activityType)
+            {
+                case "Apartment":
+                    break;
+            }
+        }
+
         private void createDb()
         {
             //connect to db
