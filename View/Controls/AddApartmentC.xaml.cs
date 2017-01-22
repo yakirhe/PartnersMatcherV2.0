@@ -43,15 +43,21 @@ namespace PartnersMatcher.View.Controls
             string rentalFee = rentalFeeTbox.Text;
             if (rentalFee != "")
             {
-                checkIfNumber(rentalFee);
+                bool isNumber = checkIfNumber(rentalFee);
+                return;
             }
             int numOfPartners = Int32.Parse(numberOfPartnersCbox.SelectedItem.ToString());
             //vm.addActivity();
         }
 
-        private void checkIfNumber(string rentalFee)
+        private bool checkIfNumber(string rentalFee)
         {
-
+            int res;
+            if (Int32.TryParse(rentalFee, out res))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
