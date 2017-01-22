@@ -54,6 +54,8 @@ namespace PartnersMatcher.View.Controls
                 case "Trip":
                     break;
                 case "Date":
+                    AddDateC addDateC = new AddDateC(vm);
+                    mainGrid.Children.Add(addDateC);
                     break;
                 case "Sport":
                     break;

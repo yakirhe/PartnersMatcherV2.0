@@ -7,6 +7,46 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="2" FontSize="30" FontWeight="Bold" Foreground="DarkRed" VerticalAlignment="Center" HorizontalAlignment="Center">Add date</TextBlock>
+        <TextBlock Grid.Row="1" Margin="40 0 0 0">Date address:</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0 0 20 0" Name="addressTb"></TextBox>
+        <TextBlock Grid.Row="3" Margin="40 0 0 0">City:</TextBlock>
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="0 0 20 0" Name="cityCb"></ComboBox>
+        <TextBlock Grid.Row="5" Margin="40 0 0 0">Budget:</TextBlock>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="0 0 20 0" Name="budgetTb"></TextBox>
+        <TextBlock Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="7">Date description:</TextBlock>
+        <TextBox AcceptsReturn="True" Grid.ColumnSpan="2" Grid.Row="9" Margin="10 0 10 0" Name="descTb"></TextBox>
+        <Grid Grid.Row="11" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <CheckBox Margin="40 0 0 0" Name="smokingCb">Is smoking friendly</CheckBox>
+            <CheckBox Grid.Column="1" Margin="0 0 20 0" Name="alcoholCb">Including alcohol</CheckBox>
+        </Grid>
+        <StackPanel Grid.Row="13" Grid.ColumnSpan="2">
+            <Button HorizontalAlignment="Center" Click="Button_Click">Publish</Button>
+        </StackPanel>
     </Grid>
 </UserControl>
