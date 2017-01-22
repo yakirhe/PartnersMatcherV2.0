@@ -87,7 +87,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Activity.cs" />
     <Compile Include="Model\ApartmentActivity.cs" />
-    <Compile Include="Model\Cities.cs" />
+    <Compile Include="Model\Data.cs" />
     <Compile Include="Model\DateActivity.cs" />
     <Compile Include="Model\SportActivity.cs" />
     <Compile Include="Model\TripActivity.cs" />

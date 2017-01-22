@@ -1,4 +1,5 @@
-﻿using PartnersMatcher.ViewModel;
+﻿using PartnersMatcher.Model;
+using PartnersMatcher.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,8 @@ namespace PartnersMatcher.View.Controls
         public AddDateC(MyViewModel vm)
         {
             InitializeComponent();
+            cityCb.ItemsSource = Data.citiesList;
+            cityCb.SelectedIndex = 0;
             this.vm = vm;
         }
 
