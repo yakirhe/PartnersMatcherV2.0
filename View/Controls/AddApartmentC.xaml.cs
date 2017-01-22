@@ -27,7 +27,27 @@ namespace PartnersMatcher.View.Controls
         {
             InitializeComponent();
             this.vm = vm;
+            initCityListBox();
             initComboBox();
+        }
+
+        private void initCityListBox()
+        {
+            List<string> city = new List<string>()
+            {
+                "Haifa",
+                "Jerusalem",
+                "Tel aviv",
+                "Dimona",
+                "Kiryat ata",
+                "Netivot",
+                "Rehovot",
+                "rishon lezion",
+                "ashdod",
+                "Beer sheva",
+            };
+            cityCbox.SelectedIndex = 0;
+            cityCbox.ItemsSource = city;
         }
 
         private void initComboBox()
@@ -39,15 +59,23 @@ namespace PartnersMatcher.View.Controls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string location = locationTbox.Text;
+            string address = addressTbox.Text;
             string rentalFee = rentalFeeTbox.Text;
             if (rentalFee != "")
             {
                 bool isNumber = checkIfNumber(rentalFee);
-                return;
+                if (!isNumber)
+                {
+                    MessageBox.Show("The rental fee must be a number");
+                    return;
+                }
             }
             int numOfPartners = Int32.Parse(numberOfPartnersCbox.SelectedItem.ToString());
-            //vm.addActivity();
+            bool petFriendly = petFriendlyCB.IsChecked.Value;
+            bool smokingFriendly = isSmokingFriendlyCB.IsChecked.Value;
+            bool isKosher = isKosherCB.IsChecked.Value;
+            string city = cityCbox.SelectedItem.ToString();
+            vm.addActivity(numOfPartners, city, address, "", "Apartment", "Apartment", rentalFee, "", petFriendly, isKosher, smokingFriendly, 0, true, "", "", "", "", "", "", false);
         }
 
         private bool checkIfNumber(string rentalFee)

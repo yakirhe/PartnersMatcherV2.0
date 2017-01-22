@@ -124,7 +124,12 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
-        internal void logOut()
+        public void addActivity(int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
+        {
+            model.addActivity(numOfPartners, city, address, partners, activityName, activityType, rentalFee, pendinglist, petFriendly, isKosher, smokingFriendly, budget, alcoholIncluded, description, sportType, region, destination, startingDate, approximateDuration, carNeeded);
+        }
+
+        public void logOut()
         {
             Connected = false;
             VM_UserConnected = null;
@@ -171,7 +176,9 @@ namespace PartnersMatcher.ViewModel
         public string Selection
         {
             get { return selection; }
-            set { selection = value;
+            set
+            {
+                selection = value;
                 notifyPropertyChanged("Selection");
             }
         }

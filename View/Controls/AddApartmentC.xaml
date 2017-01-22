@@ -22,13 +22,17 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock FontSize="30" Grid.ColumnSpan="2" FontWeight="Bold" Foreground="DarkRed" HorizontalAlignment="Center" VerticalAlignment="Center">Add apartment</TextBlock>
-        <TextBlock Name="locationTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Location</TextBlock>
-        <TextBlock Name="rentalFeeTB" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Rental Fee</TextBlock>
-        <TextBlock Name="numberOfPartnersTB" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Number of partners</TextBlock>
-        <TextBox Name="locationTbox" Grid.Row="1" Grid.Column="1" Margin="0,12,12,12"></TextBox>
-        <TextBox Name="rentalFeeTbox" Grid.Row="2" Grid.Column="1" Margin="0,12,12,12"></TextBox>
-        <ComboBox Name="numberOfPartnersCbox" Grid.Row="3" Grid.Column="1" Margin="0,12,12,12"></ComboBox>
-        <Grid Grid.Row="4">
+        <TextBlock Name="cityTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">City</TextBlock>
+        <ComboBox Name="cityCbox" Grid.Row="1" Grid.Column="1" Margin="0,12,12,12"></ComboBox>
+
+        <TextBlock Name="addressTB" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Location</TextBlock>
+        <TextBlock Name="rentalFeeTB" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Rental Fee</TextBlock>
+        <TextBlock Name="numberOfPartnersTB" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Number of partners</TextBlock>
+        <TextBox Name="addressTbox" Grid.Row="2" Grid.Column="1" Margin="0,12,12,12"></TextBox>
+        <TextBox Name="rentalFeeTbox" Grid.Row="3" Grid.Column="1" Margin="0,12,12,12"></TextBox>
+        <ComboBox Name="numberOfPartnersCbox" Grid.Row="4" Grid.Column="1" Margin="0,12,12,12"></ComboBox>
+      
+        <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -36,7 +40,7 @@
             <TextBlock Name="petFriendlyTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Pet friendly</TextBlock>
             <CheckBox Name="petFriendlyCB" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,13,49,10"></CheckBox>
         </Grid>
-        <Grid Grid.Row="4" Grid.Column="1">
+        <Grid Grid.Row="6" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -44,7 +48,7 @@
             <TextBlock Name="isKosherTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">is kosher</TextBlock>
             <CheckBox Name="isKosherCB" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,13,59,10"></CheckBox>
         </Grid>
-        <Grid Grid.Row="5">
+        <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -52,7 +56,7 @@
             <TextBlock Name="isSmokingFriendlyTB" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10">Is smoking friendly</TextBlock>
             <CheckBox Name="isSmokingFriendlyCB" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,12,49,10"></CheckBox>
         </Grid>
-        <Grid Grid.Row="6" Grid.ColumnSpan="2">
+        <Grid Grid.Row="7" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -60,5 +64,6 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" HorizontalAlignment="Right" Width="100" Click="Button_Click">Publish</Button>
         </Grid>
+        
     </Grid>
 </UserControl>
