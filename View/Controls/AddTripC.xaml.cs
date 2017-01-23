@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PartnersMatcher.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class AddTripC : UserControl
     {
-        public AddTripC()
+        MyViewModel vm;
+
+        public AddTripC(MyViewModel vm)
         {
             InitializeComponent();
+            this.vm = vm;
         }
     }
 }
