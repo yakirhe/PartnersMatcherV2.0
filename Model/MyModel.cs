@@ -29,6 +29,8 @@ namespace PartnersMatcher.Model
             }
         }
 
+        static int activityNumber;
+
         private User userConnected;
 
         public User UserConnected
@@ -47,9 +49,72 @@ namespace PartnersMatcher.Model
         {
             usersDict = new Dictionary<string, User>();
             createDb();
+            loadActivities();
         }
 
+        private void loadActivities()
+        {
+            initActivities();
+            try
+            {
+                int count = 1;
+                dbConnection.Open();
+                string activityQuery = "select * from Activities";
+                OleDbCommand command = new OleDbCommand(activityQuery, dbConnection);
+                OleDbDataReader r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    string activityType = r.GetString(6);
+                    switch (activityType)
+                    {
+                        case "Apartment":
+                            int maxUsers = r.GetInt32(1);
+                            string city = r.GetString(2);
+                            string address = r.GetString(3);
+                            string partners = r.GetString(4);
+                            string activityName = r.GetString(5);
+                            int ammountToPay = r.GetInt32(7);
+                            string pendingList = r.GetString(8);
+                            bool petAllowed = r.GetBoolean(9);
+                            bool isKosher = r.GetBoolean(10);
+                            bool smokingAllowed = r.GetBoolean(11);
+                            int budget = r.GetInt32(12);
+                            string description = r.GetString(14);
+                            //convert partners from string to list
+                            Activity activity = new ApartmentActivity(city, address, budget, petAllowed, isKosher, smokingAllowed, maxUsers, null, activityName, activityType, 0, description, null);
+                            activityList[activityType].Add(activity);
+                            break;
+                        case "sport":
+                            break;
+                        case "date":
+                            break;
+                        case "trip":
+                            break;
+                        default:
+                            break;
+                    }
+                    count++;
+                }
+                activityNumber = count;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+        }
 
+        private void initActivities()
+        {
+            activityList = new Dictionary<string, List<Activity>>();
+            activityList["Apartment"] = new List<Activity>();
+            activityList["sport"] = new List<Activity>();
+            activityList["date"] = new List<Activity>();
+            activityList["trip"] = new List<Activity>();
+        }
 
 
         public void addActivity(int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
