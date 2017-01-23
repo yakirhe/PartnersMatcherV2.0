@@ -47,71 +47,10 @@ namespace PartnersMatcher.Model
         {
             usersDict = new Dictionary<string, User>();
             createDb();
-            EnterActivies();
         }
 
-        private void EnterActivies()
-        {
-            activityList = new Dictionary<string, List<Activity>>();
-            activityList["sport"] = new List<Activity>();
-            activityList["date"] = new List<Activity>();
-            activityList["trip"] = new List<Activity>();
-            activityList["apartment"] = new List<Activity>();
-            //create activities
-            #region enter Activities
-            //sport activity
-            Activity sport1 = new SportActivity("Haifa", "football", 12, new List<User>(), "football at sportek", "sport", 0, new List<User>());
-            Activity sport2 = new SportActivity("Beer sheva", "basketball", 8, new List<User>(), "basketball at the sport center", "sport", 0, new List<User>());
-            Activity sport3 = new SportActivity("Tel aviv", "tennis", 2, new List<User>(), "tennis at the sport center", "sport", 0, new List<User>());
-            Activity sport4 = new SportActivity("jerusalem", "swimming", 6, new List<User>(), "swimming at the sport center", "sport", 0, new List<User>());
-            Activity sport5 = new SportActivity("Tel aviv", "running", 5, new List<User>(), "running at the stadium", "sport", 0, new List<User>());
-            //date activity
-            Activity date1 = new DateActivity("Beer Sheva", 200, true, true, "Date at the benji", new List<User>(), "date at the benji", "date", 0, new List<User>());
-            Activity date2 = new DateActivity("Jerusalem", 50, true, true, "date at the coffix", new List<User>(), "date at the coffix", "date", 0, new List<User>());
-            Activity date3 = new DateActivity("Tel aviv", 100, true, true, "date at the cinema", new List<User>(), "date at the cinema", "date", 0, new List<User>());
-            Activity date4 = new DateActivity("Haifa", 150, true, true, "date at the nargila bar", new List<User>(), "date at the nargila bar", "date", 0, new List<User>());
-            Activity date5 = new DateActivity("Tel aviv", 250, true, true, "date at the dude resturant", new List<User>(), "date at the dude resturant", "date", 0, new List<User>());
-            //trip activity
-            Activity trip1 = new TripActivity("Africa", "Madagascar", "12.12", "24 days", false, 4, new List<User>(), "Jungles trip", "trip", 11000, new List<User>());
-            Activity trip2 = new TripActivity("Caribbean", "Cayman islands & Jamaica", "7.4", "12 days", false, 7, new List<User>(), "Trip to the caribbean sea", "trip", 14000, new List<User>());
-            Activity trip3 = new TripActivity("Australia", "beach surfing in australia", "7.4", "12 days", false, 7, new List<User>(), "beach surfing in australia", "trip", 14000, new List<User>());
-            Activity trip4 = new TripActivity("Far east", "meditation in india", "7.4", "12 days", false, 7, new List<User>(), "meditation in india", "trip", 14000, new List<User>());
-            Activity trip5 = new TripActivity("South america", "travel to iguasu falls in argentina and brazil", "7.4", "12 days", false, 7, new List<User>(), "travel to iguasu falls in argentina and brazil", "trip", 14000, new List<User>());
-            Activity trip6 = new TripActivity("North america", "travel to niagra falls in U.S.A", "7.4", "12 days", false, 7, new List<User>(), "travel to niagra falls in U.S.A", "trip", 14000, new List<User>());
-            Activity trip7 = new TripActivity("Scandinavia", "travel to the north glow", "7.4", "12 days", false, 7, new List<User>(), "travel to the north glow", "trip", 14000, new List<User>());
-            Activity trip8 = new TripActivity("Middle east", "travel to jorden", "7.4", "12 days", false, 7, new List<User>(), "travel to jorden", "trip", 14000, new List<User>());
-            //rent apatment activity
-            Activity apartment1 = new ApartmentActivity("Tel Aviv", 2200, true, false, true, 3, new List<User>(), "4 rooms apartment", "apartment", 0, new List<User>());
-            Activity apartment2 = new ApartmentActivity("Jerusalem", 1600, true, true, false, 3, new List<User>(), "4 rooms apartment + 20ft balcony", "apartment", 0, new List<User>());
-            Activity apartment3 = new ApartmentActivity("Haifa", 1600, true, true, false, 3, new List<User>(), "4 rooms apartment + 20ft balcony", "apartment", 0, new List<User>());
-            Activity apartment4 = new ApartmentActivity("Beer sheva", 1600, true, true, false, 3, new List<User>(), "4 rooms apartment + 20ft balcony", "apartment", 0, new List<User>());
-            Activity apartment5 = new ApartmentActivity("Tel aviv", 3000, true, true, false, 3, new List<User>(), "4 rooms apartment + 20ft balcony", "apartment", 0, new List<User>());
-            activityList["sport"].Add(sport1);
-            activityList["sport"].Add(sport2);
-            activityList["sport"].Add(sport3);
-            activityList["sport"].Add(sport4);
-            activityList["sport"].Add(sport5);
-            activityList["date"].Add(date1);
-            activityList["date"].Add(date2);
-            activityList["date"].Add(date3);
-            activityList["date"].Add(date4);
-            activityList["date"].Add(date5);
-            activityList["trip"].Add(trip1);
-            activityList["trip"].Add(trip2);
-            activityList["trip"].Add(trip3);
-            activityList["trip"].Add(trip4);
-            activityList["trip"].Add(trip5);
-            activityList["trip"].Add(trip6);
-            activityList["trip"].Add(trip7);
-            activityList["trip"].Add(trip8);
-            activityList["apartment"].Add(apartment1);
-            activityList["apartment"].Add(apartment2);
-            activityList["apartment"].Add(apartment3);
-            activityList["apartment"].Add(apartment4);
-            activityList["apartment"].Add(apartment5);
 
-            #endregion
-        }
+
 
         public void addActivity(int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
         {

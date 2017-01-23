@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PartnersMatcher.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,54 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class AddSportC : UserControl
     {
-        public AddSportC()
+        MyViewModel vm;
+
+        public AddSportC(MyViewModel vm)
         {
             InitializeComponent();
+            initSportTypeCB();
+            initCityCB();
+            this.vm = vm;
+        }
+
+        private void initCityCB()
+        {
+            List<string> city = new List<string>()
+            {
+                "Haifa",
+                "Jerusalem",
+                "Tel aviv",
+                "Dimona",
+                "Kiryat ata",
+                "Netivot",
+                "Rehovot",
+                "rishon lezion",
+                "ashdod",
+                "Beer sheva",
+            };
+            cityCB.SelectedIndex = 0;
+            cityCB.ItemsSource = city;
+        }
+
+        private void initSportTypeCB()
+        {
+            List<string> sportType = new List<string>()
+            {
+                "Tennis",
+                "Football",
+                "BasketBall",
+                "Rugby",
+                "Running",
+                "Swimming"
+            };
+            sportTypeCB.SelectedIndex = 0;
+            sportTypeCB.ItemsSource = sportType;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string sportType = sportTypeCB.SelectedItem.ToString();
+            string city = cityCB.SelectedItem.ToString();
         }
     }
 }

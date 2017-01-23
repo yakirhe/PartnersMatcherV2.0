@@ -9,12 +9,21 @@ namespace PartnersMatcher.Model
     public class SportActivity : Activity
     {
         #region Properties
-        private string location;
+        private string city;
 
-        public string Location
+        public string City
         {
-            get { return location; }
-            set { location = value; }
+            get { return city; }
+            set { city = value; }
+        }
+
+
+        private string address;
+
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
         }
 
         private string sportType;
@@ -26,9 +35,10 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public SportActivity(string location, string sportType, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, location, partners, activityName, type, payments, pendingList)
+        public SportActivity(string city, string address, string sportType, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, city, partners, activityName, type, payments, pendingList)
         {
-            this.location = location;
+            this.city = city;
+            this.address = address;
             this.sportType = sportType;
         }
     }

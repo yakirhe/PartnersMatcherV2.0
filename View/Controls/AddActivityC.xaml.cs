@@ -58,6 +58,8 @@ namespace PartnersMatcher.View.Controls
                     mainGrid.Children.Add(addDateC);
                     break;
                 case "Sport":
+                    AddSportC addSportC = new AddSportC(vm);
+                    mainGrid.Children.Add(addSportC);
                     break;
                 default:
                     break;
