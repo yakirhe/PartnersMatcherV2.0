@@ -35,7 +35,7 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public SportActivity(string city, string address, string sportType, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, city, partners, activityName, type, payments, pendingList)
+        public SportActivity(string city, string address, string sportType, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList, string description) : base(maxUsers, city, partners, activityName, type, payments, pendingList, description)
         {
             this.city = city;
             this.address = address;

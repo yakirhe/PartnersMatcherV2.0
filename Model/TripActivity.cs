@@ -51,7 +51,7 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public TripActivity(string region, string destination, string startingDate, string approximateDuration, bool carNeeded, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(maxUsers, destination, partners, activityName, type, payments, pendingList)
+        public TripActivity(string region, string destination, string startingDate, string approximateDuration, bool carNeeded, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList, string description) : base(maxUsers, destination, partners, activityName, type, payments, pendingList, description)
         {
             this.destination = destination;
             this.startingDate = startingDate;

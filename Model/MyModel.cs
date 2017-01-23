@@ -82,7 +82,7 @@ namespace PartnersMatcher.Model
                             string description = r.GetString(14);
                             //convert partners from string to list
                             Activity activity = new ApartmentActivity(city, address, budget, petAllowed, isKosher, smokingAllowed, maxUsers, null, activityName, activityType, 0, description, null);
-                            activityList[activityType].Add(activity);
+                            activityList[activityType.ToLower()].Add(activity);
                             break;
                         case "sport":
                             break;
@@ -110,7 +110,7 @@ namespace PartnersMatcher.Model
         private void initActivities()
         {
             activityList = new Dictionary<string, List<Activity>>();
-            activityList["Apartment"] = new List<Activity>();
+            activityList["apartment"] = new List<Activity>();
             activityList["sport"] = new List<Activity>();
             activityList["date"] = new List<Activity>();
             activityList["trip"] = new List<Activity>();
@@ -119,9 +119,16 @@ namespace PartnersMatcher.Model
 
         public void addActivity(int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
         {
+            List<User> sendNull = new List<User>();
             switch (activityType)
             {
                 case "Apartment":
+                    Activity newApartment = new ApartmentActivity(city, address, Int32.Parse(rentalFee), petFriendly, isKosher, smokingFriendly, Int32.Parse(partners), sendNull, activityName, activityType, Int32.Parse(rentalFee), description, sendNull);
+                    sendQuery(newApartment, "apartment");
+                    break;
+                case "sport":
+                    Activity newSport = new SportActivity(city, address, sportType, numOfPartners, sendNull, activityName, activityType, 0, null, description);
+                    sendQuery(newSport, "sport");
                     break;
             }
         }
@@ -201,7 +208,7 @@ namespace PartnersMatcher.Model
                 return;
             }
             User user = new User(email, password, fullName, dob, phone, city, smoking, pet);
-            sendQuery(user);
+            sendQuery(user, "user");
             sendMail(fullName, email);
         }
 
@@ -233,22 +240,79 @@ namespace PartnersMatcher.Model
             return false;
         }
 
-        private void sendQuery(User user)
+        private void sendQuery(object addToTables, string name)
         {
+            name = name.ToLower();
             try
             {
-                string sqlQuery = "INSERT INTO Users ([Email], [Password], [Full name], [Dob], [Phone], [City], [Smoking], [Pet])" + " VALUES (@Email,@Password,@Fullname,@Dob,@Phone,@City,@Smoking,@Pet)";
-                OleDbCommand command = new OleDbCommand(sqlQuery, dbConnection);
-                command.Parameters.AddWithValue("@Username", user.Email);
-                command.Parameters.AddWithValue("@Password", user.Password);
-                command.Parameters.AddWithValue("@Fullname", user.FullName);
-                command.Parameters.AddWithValue("@Dob", user.Dob);
-                command.Parameters.AddWithValue("@Phone", user.Phone);
-                command.Parameters.AddWithValue("@City", user.City);
-                command.Parameters.AddWithValue("@Smoking", user.Smoking);
-                command.Parameters.AddWithValue("@Pet", user.Pet);
-                dbConnection.Open();
-                command.ExecuteNonQuery();
+                switch (name)
+                {
+                    case "user":
+                        User user = (User)addToTables;
+                        string sqlQueryU = "INSERT INTO Users ([Email], [Password], [Full name], [Dob], [Phone], [City], [Smoking], [Pet])" + " VALUES (@Email,@Password,@Fullname,@Dob,@Phone,@City,@Smoking,@Pet)";
+                        OleDbCommand command = new OleDbCommand(sqlQueryU, dbConnection);
+                        command.Parameters.AddWithValue("@Email", user.Email);
+                        command.Parameters.AddWithValue("@Password", user.Password);
+                        command.Parameters.AddWithValue("@Fullname", user.FullName);
+                        command.Parameters.AddWithValue("@Dob", user.Dob);
+                        command.Parameters.AddWithValue("@Phone", user.Phone);
+                        command.Parameters.AddWithValue("@City", user.City);
+                        command.Parameters.AddWithValue("@Smoking", user.Smoking);
+                        command.Parameters.AddWithValue("@Pet", user.Pet);
+                        dbConnection.Open();
+                        command.ExecuteNonQuery();
+                        break;
+                    case "apartment":
+                        ApartmentActivity apartment = (ApartmentActivity)addToTables;
+                        string sqlQueryA = "INSERT INTO Activities ([ActivityNumber], [maxUsers], [City], [Address], [partners], [activityName], [activityType], [ammountToPay], [pendingList], [petAllowed], [isKosher], [smokingAllowed], [budget],[alcoholIncluded], [description], [sportType], [region], [destination], [startingDate],[approximateDuration], [carNeeded])" + " VALUES (@activityNumber,@maxUsers,@City,@Address,@partners,@activityName,@activityType,@ammountToPay,@pendingList,@petAllowed,@isKosher,@smokingAllowed,@budget,@alcoholIncluded,@description,@sportType,@region,@destination,@startingDate,@approximateDuration,@carNeeded)";
+                        OleDbCommand commandA = new OleDbCommand(sqlQueryA, dbConnection);
+                        commandA.Parameters.AddWithValue("@activityNumber", activityNumber++);
+                        commandA.Parameters.AddWithValue("@maxUsers", apartment.MaxUsers);
+                        commandA.Parameters.AddWithValue("@City", apartment.City);
+                        commandA.Parameters.AddWithValue("@Address", apartment.Address);
+                        commandA.Parameters.AddWithValue("@partners", apartment.MaxUsers);
+                        commandA.Parameters.AddWithValue("@activityName", apartment.ActivityName);
+                        commandA.Parameters.AddWithValue("@activityType", apartment.Type);
+                        commandA.Parameters.AddWithValue("@ammountToPay", apartment.RentalFee);
+                        commandA.Parameters.AddWithValue("@pendingList", "");
+                        commandA.Parameters.AddWithValue("@petAllowed", apartment.PetFriendly);
+                        commandA.Parameters.AddWithValue("@isKosher", apartment.IsKosher);
+                        commandA.Parameters.AddWithValue("@smokingAllowed", apartment.IsSmokingFriendly);
+                        commandA.Parameters.AddWithValue("@budget", apartment.RentalFee);
+                        commandA.Parameters.AddWithValue("@alcoholIncluded", true);
+                        commandA.Parameters.AddWithValue("@description", apartment.Description);
+                        commandA.Parameters.AddWithValue("@sportType", "");
+                        commandA.Parameters.AddWithValue("@region", "");
+                        commandA.Parameters.AddWithValue("@destination", "");
+                        commandA.Parameters.AddWithValue("@staringDate", "");
+                        commandA.Parameters.AddWithValue("@approximateDuration", "");
+                        commandA.Parameters.AddWithValue("@carNeeded", false);
+                        dbConnection.Open();
+                        commandA.ExecuteNonQuery();
+                        break;
+                    case "sport":
+                        SportActivity sport = (SportActivity)addToTables;
+                        string sqlQuery = "INSERT INTO Activities ([ActivityNumber], [maxUsers], [City], [Address], [partners], [activityName], [activityType], [ammountToPay], [pendingList], [petAllowed], [isKosher], [smokingAllowed], [budget],[alcoholIncluded], [description], [sportType], [region], [destination], [startingDate],[approximateDuration], [carNeeded])" + " VALUES (@activityNumber,@maxUsers,@City,@Address,@partners,@activityName,@activityType,@ammountToPay,@pendingList,@petAllowed,@isKosher,@smokingAllowed,@budget,@alcoholIncluded,@description,@sportType,@region,@destination,@startingDate,@approximateDuration,@carNeeded)";
+                        OleDbCommand commandB = new OleDbCommand(sqlQuery, dbConnection);
+                        commandB.Parameters.AddWithValue("@activityNumber", activityNumber++);
+                        commandB.Parameters.AddWithValue("@maxUsers", sport.MaxUsers);
+                        commandB.Parameters.AddWithValue("@City", sport.City);
+                        commandB.Parameters.AddWithValue("@Address", sport.Address);
+                        commandB.Parameters.AddWithValue("@partners", "");
+                        commandB.Parameters.AddWithValue("@activityName", sport.ActivityName);
+                        commandB.Parameters.AddWithValue("@activityType", sport.Type);
+                        commandB.Parameters.AddWithValue("@ammountToPay", 0);
+                        commandB.Parameters.AddWithValue("@pendingList", "");
+                        commandB.Parameters.AddWithValue("@description", sport.Description);
+                        commandB.Parameters.AddWithValue("@sportType", sport.SportType);
+                        commandB.Parameters.AddWithValue("@region", "");
+                        commandB.Parameters.AddWithValue("@destination", "");
+                        commandB.Parameters.AddWithValue("@staringDate", "");
+                        commandB.Parameters.AddWithValue("@approximateDuration", "");
+                        dbConnection.Open();
+                        commandB.ExecuteNonQuery();
+                        break;
+                }
             }
             catch (Exception e)
             {

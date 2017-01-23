@@ -7,15 +7,6 @@ namespace PartnersMatcher.Model
         #region Properties
         private string city;
 
-        private string description;
-
-        public string Description
-        {
-            get { return description; }
-            set { description = value; }
-        }
-
-
         public string City
         {
             get { return city; }
@@ -64,9 +55,8 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public ApartmentActivity(string city, string address, int rentalFee, bool petFriendly, bool isKosher, bool isSmokingFriendly, int maxUsers, List<User> partners, string activityName, string type, int payments, string description, List<User> pendingList) : base(maxUsers, address, partners, activityName, activityName, rentalFee, pendingList)
+        public ApartmentActivity(string city, string address, int rentalFee, bool petFriendly, bool isKosher, bool isSmokingFriendly, int maxUsers, List<User> partners, string activityName, string type, int payments, string description, List<User> pendingList) : base(maxUsers, address, partners, activityName, activityName, rentalFee, pendingList, description)
         {
-            this.description = description;
             this.city = city;
             this.address = address;
             this.rentalFee = rentalFee;

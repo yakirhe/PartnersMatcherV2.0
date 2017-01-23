@@ -42,12 +42,11 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public DateActivity(string location, double budget, bool isSmokingFriendly, bool includeAlcohol, string description, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(2, location, partners, activityName, type, payments, pendingList)
+        public DateActivity(string location, double budget, bool isSmokingFriendly, bool includeAlcohol, string description, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(2, location, partners, activityName, type, payments, pendingList, description)
         {
             this.budget = budget;
             this.isSmokingFriendly = isSmokingFriendly;
             this.includeAlcohol = includeAlcohol;
-            this.description = description;
         }
     }
 }

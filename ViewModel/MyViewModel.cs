@@ -79,7 +79,7 @@ namespace PartnersMatcher.ViewModel
                     List<Activity> filteredApts = new List<Activity>();
                     foreach (ApartmentActivity activity in activities)
                     {
-                        if (city.ToLower() == activity.Location.ToLower())
+                        if (city.ToLower() == activity.City.ToLower())
                         {
                             filteredApts.Add(activity);
                         }

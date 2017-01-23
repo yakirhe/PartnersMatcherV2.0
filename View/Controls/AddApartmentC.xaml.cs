@@ -75,7 +75,8 @@ namespace PartnersMatcher.View.Controls
             bool smokingFriendly = isSmokingFriendlyCB.IsChecked.Value;
             bool isKosher = isKosherCB.IsChecked.Value;
             string city = cityCbox.SelectedItem.ToString();
-            vm.addActivity(numOfPartners, city, address, "", "Apartment", "Apartment", rentalFee, "", petFriendly, isKosher, smokingFriendly, 0, true, "", "", "", "", "", "", false);
+            string description = descTb.Text;
+            vm.addActivity(numOfPartners, city, address, numOfPartners.ToString(), "Apartment", "Apartment", rentalFee, "", petFriendly, isKosher, smokingFriendly, 0, true, description, "", "", "", "", "", false);
         }
 
         private bool checkIfNumber(string rentalFee)

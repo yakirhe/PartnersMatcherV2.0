@@ -10,6 +10,15 @@ namespace PartnersMatcher.Model
     public abstract class Activity
     {
         #region Properties
+        private string description;
+
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+
+
         private string location;
 
         public string Location
@@ -68,8 +77,9 @@ namespace PartnersMatcher.Model
         }
         #endregion
 
-        public Activity(int maxUsers, string location, List<User> partners, string activityName, string type, double payments, List<User> pendingList)
+        public Activity(int maxUsers, string location, List<User> partners, string activityName, string type, double payments, List<User> pendingList,string description)
         {
+            this.description = description;
             this.maxUsers = maxUsers;
             this.location = location;
             this.partners = partners;

@@ -1,4 +1,5 @@
-﻿using PartnersMatcher.ViewModel;
+﻿using PartnersMatcher.Model;
+using PartnersMatcher.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,24 +29,19 @@ namespace PartnersMatcher.View.Controls
             InitializeComponent();
             initSportTypeCB();
             initCityCB();
+            initNumOfPlayersCB();
             this.vm = vm;
+        }
+
+        private void initNumOfPlayersCB()
+        {
+            List<int> nums = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            numOfPlayersCB.ItemsSource = nums;
         }
 
         private void initCityCB()
         {
-            List<string> city = new List<string>()
-            {
-                "Haifa",
-                "Jerusalem",
-                "Tel aviv",
-                "Dimona",
-                "Kiryat ata",
-                "Netivot",
-                "Rehovot",
-                "rishon lezion",
-                "ashdod",
-                "Beer sheva",
-            };
+            List<string> city = Data.citiesList;
             cityCB.SelectedIndex = 0;
             cityCB.ItemsSource = city;
         }
@@ -69,6 +65,10 @@ namespace PartnersMatcher.View.Controls
         {
             string sportType = sportTypeCB.SelectedItem.ToString();
             string city = cityCB.SelectedItem.ToString();
+            string address = addressTB.Text;
+            int numOfPlayers = Int32.Parse(numOfPlayersCB.SelectedItem.ToString());
+            string description = descTb.Text;
+            vm.addActivity(numOfPlayers, city, address, "", "sport", "sport", "", "", false, false, false, 0, false, description, sportType, "", "", "", "", false);
         }
     }
 }
