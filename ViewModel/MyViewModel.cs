@@ -45,25 +45,39 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
-        internal void filterByLocation(string city, string type)
+        internal void sendRequest(User userReq, Activity activity)
+        {
+            model.sendRequest(userReq, activity);
+        }
+
+        internal void filterByLocation(string city, string type, double maxPrice = 0)
         {
             switch (type)
             {
                 case "apartment":
-                    filterCity(city, model.ActivityList[type], type);
+                    filterCity(city, model.ActivityList[type], type, maxPrice);
                     break;
+
                 case "sport":
-                    filterCity(city, model.ActivityList[type], type);
+                    filterCity(city, model.ActivityList[type], type, maxPrice);
                     break;
+
                 case "date":
-                    filterCity(city, model.ActivityList[type], type);
+                    filterCity(city, model.ActivityList[type], type, maxPrice);
                     break;
+
                 case "trip":
-                    filterCity(city, model.ActivityList[type], type);
+                    filterCity(city, model.ActivityList[type], type, maxPrice);
                     break;
+
                 default:
                     break;
             }
+        }
+
+        public void accepsRequests(List<string> acceptRequests)
+        {
+            model.acceptRequests(acceptRequests);
         }
 
         public List<Activity> FilteredApts { get; set; }
@@ -71,7 +85,7 @@ namespace PartnersMatcher.ViewModel
         public List<Activity> FilteredDates { get; set; }
         public List<Activity> FilteredSports { get; set; }
 
-        private void filterCity(string city, List<Activity> activities, string type)
+        private void filterCity(string city, List<Activity> activities, string type, double maxPrice = 0)
         {
             switch (type)
             {
@@ -81,33 +95,37 @@ namespace PartnersMatcher.ViewModel
                     {
                         if (city.ToLower() == activity.City.ToLower())
                         {
-                            filteredApts.Add(activity);
+                            if (maxPrice != 0 && activity.RentalFee <= maxPrice)
+                                filteredApts.Add(activity);
                         }
                     }
                     FilteredApts = filteredApts;
                     break;
+
                 case "sport":
                     List<Activity> filteredSports = new List<Activity>();
                     foreach (SportActivity activity in activities)
                     {
-                        if (city.ToLower() == activity.Location.ToLower())
+                        if (city.ToLower() == activity.City.ToLower())
                         {
                             filteredSports.Add(activity);
                         }
                     }
                     FilteredSports = filteredSports;
                     break;
+
                 case "date":
                     List<Activity> filteredDate = new List<Activity>();
                     foreach (DateActivity activity in activities)
                     {
-                        if (city.ToLower() == activity.Location.ToLower())
+                        if (city.ToLower() == activity.City.ToLower())
                         {
                             filteredDate.Add(activity);
                         }
                     }
                     FilteredDates = filteredDate;
                     break;
+
                 case "trip":
                     List<Activity> filteredTrips = new List<Activity>();
                     foreach (TripActivity activity in activities)
@@ -119,14 +137,20 @@ namespace PartnersMatcher.ViewModel
                     }
                     FilteredTrips = filteredTrips;
                     break;
+
                 default:
                     break;
             }
         }
 
-        public void addActivity(int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
+        public void ignoreFromPendingList(List<string> ignoreRequest)
         {
-            model.addActivity(numOfPartners, city, address, partners, activityName, activityType, rentalFee, pendinglist, petFriendly, isKosher, smokingFriendly, budget, alcoholIncluded, description, sportType, region, destination, startingDate, approximateDuration, carNeeded);
+            model.ignoreFromPendingList(ignoreRequest);
+        }
+
+        public void addActivity(User activityManager, int numOfPartners, string city, string address, string partners, string activityName, string activityType, string rentalFee, string pendinglist, bool petFriendly, bool isKosher, bool smokingFriendly, int budget, bool alcoholIncluded, string description, string sportType, string region, string destination, string startingDate, string approximateDuration, bool carNeeded)
+        {
+            model.addActivity(numOfPartners, city, address, partners, activityName, activityType, rentalFee, pendinglist, petFriendly, isKosher, smokingFriendly, budget, alcoholIncluded, description, sportType, region, destination, startingDate, approximateDuration, carNeeded, activityManager);
         }
 
         public void logOut()
@@ -183,7 +207,6 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
-
         private User userConnected;
 
         public User VM_UserConnected
@@ -214,14 +237,14 @@ namespace PartnersMatcher.ViewModel
             }
         }
 
-        internal void addUser(string fullName, string email, string dob, string password, string city, string phone, bool smoking, bool pet)
+        public void addUser(string fullName, string email, string dob, string password, string city, string phone, bool smoking, bool pet)
         {
             model.addUser(fullName, email, dob, password, city, phone, smoking, pet);
         }
 
-        internal bool signIn(string email, string password)
+        public bool signIn(string email, string password, MyViewModel vm)
         {
-            return model.signIn(email, password);
+            return model.signIn(email, password, vm);
         }
     }
 }

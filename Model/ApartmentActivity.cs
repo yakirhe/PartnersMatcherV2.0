@@ -5,22 +5,6 @@ namespace PartnersMatcher.Model
     public class ApartmentActivity : Activity
     {
         #region Properties
-        private string city;
-
-        public string City
-        {
-            get { return city; }
-            set { city = value; }
-        }
-
-        private string address;
-
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
-
 
         private double rentalFee;
 
@@ -53,12 +37,11 @@ namespace PartnersMatcher.Model
             get { return isSmokingFriendly; }
             set { isSmokingFriendly = value; }
         }
-        #endregion
 
-        public ApartmentActivity(string city, string address, int rentalFee, bool petFriendly, bool isKosher, bool isSmokingFriendly, int maxUsers, List<User> partners, string activityName, string type, int payments, string description, List<User> pendingList) : base(maxUsers, address, partners, activityName, activityName, rentalFee, pendingList, description)
+        #endregion Properties
+
+        public ApartmentActivity(User activityManager, string city, string address, int rentalFee, bool petFriendly, bool isKosher, bool isSmokingFriendly, int maxUsers, List<User> partners, string activityName, string type, int payments, string description, List<User> pendingList) : base(maxUsers, address, city, partners, activityName, activityName, rentalFee, pendingList, description, activityManager)
         {
-            this.city = city;
-            this.address = address;
             this.rentalFee = rentalFee;
             this.petFriendly = petFriendly;
             this.isKosher = isKosher;

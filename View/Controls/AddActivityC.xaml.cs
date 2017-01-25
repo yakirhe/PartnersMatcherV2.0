@@ -21,7 +21,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class AddActivityC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public AddActivityC(MyViewModel vm)
         {
@@ -51,16 +51,22 @@ namespace PartnersMatcher.View.Controls
                     AddApartmentC addApartmentC = new AddApartmentC(vm);
                     mainGrid.Children.Add(addApartmentC);
                     break;
+
                 case "Trip":
+                    AddTripC addTripC = new AddTripC(vm);
+                    mainGrid.Children.Add(addTripC);
                     break;
+
                 case "Date":
                     AddDateC addDateC = new AddDateC(vm);
                     mainGrid.Children.Add(addDateC);
                     break;
+
                 case "Sport":
                     AddSportC addSportC = new AddSportC(vm);
                     mainGrid.Children.Add(addSportC);
                     break;
+
                 default:
                     break;
             }

@@ -107,6 +107,9 @@
     <Compile Include="View\Controls\AddTripC.xaml.cs">
       <DependentUpon>AddTripC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\ApartmentDisplayC.xaml.cs">
+      <DependentUpon>ApartmentDisplayC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\ApartmentsC.xaml.cs">
       <DependentUpon>ApartmentsC.xaml</DependentUpon>
     </Compile>
@@ -116,8 +119,14 @@
     <Compile Include="View\Controls\DateC.xaml.cs">
       <DependentUpon>DateC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\DateDisplayC.xaml.cs">
+      <DependentUpon>DateDisplayC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\DateViewC.xaml.cs">
       <DependentUpon>DateViewC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\JoinRequests.xaml.cs">
+      <DependentUpon>JoinRequests.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\loggedIn.xaml.cs">
       <DependentUpon>loggedIn.xaml</DependentUpon>
@@ -131,11 +140,17 @@
     <Compile Include="View\Controls\SportC.xaml.cs">
       <DependentUpon>SportC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\SportDisplayC.xaml.cs">
+      <DependentUpon>SportDisplayC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\SportViewC.xaml.cs">
       <DependentUpon>SportViewC.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\TripC.xaml.cs">
       <DependentUpon>TripC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\TripDisplayC.xaml.cs">
+      <DependentUpon>TripDisplayC.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\TripViewC.xaml.cs">
       <DependentUpon>TripViewC.xaml</DependentUpon>
@@ -163,6 +178,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Controls\ApartmentDisplayC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Controls\ApartmentsC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,7 +194,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Controls\DateDisplayC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Controls\DateViewC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\JoinRequests.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,11 +226,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Controls\SportDisplayC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Controls\SportViewC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Controls\TripC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\TripDisplayC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

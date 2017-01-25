@@ -22,7 +22,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class AddDateC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public AddDateC(MyViewModel vm)
         {
@@ -46,7 +46,7 @@ namespace PartnersMatcher.View.Controls
             bool smoking = smokingCb.IsChecked.Value;
             string description = descTb.Text;
             int num;
-            if(!Int32.TryParse(budget,out num))
+            if (!Int32.TryParse(budget, out num))
             {
                 MessageBox.Show("Budget must to be a number");
                 return;
@@ -56,6 +56,9 @@ namespace PartnersMatcher.View.Controls
                 MessageBox.Show("You didn't write the date address");
                 return;
             }
+            vm.addActivity(vm.VM_UserConnected,2, city, address, "", "date", "date", "0", "", false, false, smoking, Int32.Parse(budget), alcohol, description, "", "", "", "", "", false);
+            MessageBox.Show("Activity added successfully");
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

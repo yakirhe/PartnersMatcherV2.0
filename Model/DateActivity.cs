@@ -9,6 +9,7 @@ namespace PartnersMatcher.Model
     public class DateActivity : Activity
     {
         #region Properties
+
         private double budget;
 
         public double Budget
@@ -33,16 +34,9 @@ namespace PartnersMatcher.Model
             set { includeAlcohol = value; }
         }
 
-        private string description;
+        #endregion Properties
 
-        public string Description
-        {
-            get { return description; }
-            set { description = value; }
-        }
-        #endregion
-
-        public DateActivity(string location, double budget, bool isSmokingFriendly, bool includeAlcohol, string description, List<User> partners, string activityName, string type, double payments, List<User> pendingList) : base(2, location, partners, activityName, type, payments, pendingList, description)
+        public DateActivity(string address, string city, double budget, bool isSmokingFriendly, bool includeAlcohol, string description, List<User> partners, string activityName, string type, double payments, List<User> pendingList, User activityManager) : base(2, address, city, partners, activityName, type, payments, pendingList, description, activityManager)
         {
             this.budget = budget;
             this.isSmokingFriendly = isSmokingFriendly;

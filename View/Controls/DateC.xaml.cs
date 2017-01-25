@@ -1,4 +1,5 @@
-﻿using PartnersMatcher.ViewModel;
+﻿using PartnersMatcher.Model;
+using PartnersMatcher.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class DateC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public DateC(MyViewModel vm)
         {
@@ -33,7 +34,7 @@ namespace PartnersMatcher.View.Controls
 
         private void initializeCityBox()
         {
-            List<string> cities = new List<string> { "Tel Aviv", "Jerusalem", "Haifa", "Beer Sheva" };
+            List<string> cities = Data.citiesList;
             cityBox.ItemsSource = cities;
         }
 
@@ -48,6 +49,7 @@ namespace PartnersMatcher.View.Controls
             activityBox.ItemsSource = vm.FilteredDates;
             resultsLbl.Visibility = Visibility.Visible;
             activityBox.Visibility = Visibility.Visible;
+            btn.IsEnabled = false;
             btn.Visibility = Visibility.Visible;
         }
 
@@ -58,7 +60,21 @@ namespace PartnersMatcher.View.Controls
                 MessageBox.Show("You need to select the activity");
                 return;
             }
-            MessageBox.Show("You were added to the pending list");
+            DateActivity da = (DateActivity)activityBox.SelectedItem;
+            DateDisplayC dateDisplay = new DateDisplayC(da, vm);
+            dateDisplay.Show();
+        }
+
+        private void activityBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (activityBox.SelectedIndex != -1)
+            {
+                btn.IsEnabled = true;
+            }
+            else
+            {
+                btn.IsEnabled = false;
+            }
         }
     }
 }

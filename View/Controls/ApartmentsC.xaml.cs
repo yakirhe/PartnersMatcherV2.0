@@ -1,4 +1,5 @@
-﻿using PartnersMatcher.ViewModel;
+﻿using PartnersMatcher.Model;
+using PartnersMatcher.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class ApartmentsC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public ApartmentsC(MyViewModel vm)
         {
@@ -33,21 +34,23 @@ namespace PartnersMatcher.View.Controls
 
         private void initializeCityBox()
         {
-            List<string> cities = new List<string> { "Tel Aviv", "Jerusalem", "Haifa", "Beer Sheva" };
+            List<string> cities = Data.citiesList;
             cityBox.ItemsSource = cities;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (cityBox.SelectedIndex==-1)
+            if (cityBox.SelectedIndex == -1)
             {
                 MessageBox.Show("You need to select a city");
                 return;
             }
-            vm.filterByLocation(cityBox.SelectedItem.ToString(),"apartment");
+            double maxPrice = sl.Value;
+            vm.filterByLocation(cityBox.SelectedItem.ToString(), "apartment", maxPrice);
             activityBox.ItemsSource = vm.FilteredApts;
             resultsLbl.Visibility = Visibility.Visible;
             activityBox.Visibility = Visibility.Visible;
+            btn.IsEnabled = false;
             btn.Visibility = Visibility.Visible;
         }
 
@@ -58,7 +61,21 @@ namespace PartnersMatcher.View.Controls
                 MessageBox.Show("You need to select the activity");
                 return;
             }
-            MessageBox.Show("You were added to the pending list");
+            ApartmentActivity aptAct = (ApartmentActivity)activityBox.SelectedItem;
+            ApartmentDisplayC aprtDisplay = new ApartmentDisplayC(aptAct, vm);
+            aprtDisplay.Show();
+        }
+
+        private void activityBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (activityBox.SelectedIndex != -1)
+            {
+                btn.IsEnabled = true;
+            }
+            else
+            {
+                btn.IsEnabled = false;
+            }
         }
     }
 }

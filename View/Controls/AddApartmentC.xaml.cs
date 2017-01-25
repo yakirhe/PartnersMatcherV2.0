@@ -1,4 +1,5 @@
-﻿using PartnersMatcher.ViewModel;
+﻿using PartnersMatcher.Model;
+using PartnersMatcher.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class AddApartmentC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public AddApartmentC(MyViewModel vm)
         {
@@ -33,19 +34,7 @@ namespace PartnersMatcher.View.Controls
 
         private void initCityListBox()
         {
-            List<string> city = new List<string>()
-            {
-                "Haifa",
-                "Jerusalem",
-                "Tel aviv",
-                "Dimona",
-                "Kiryat ata",
-                "Netivot",
-                "Rehovot",
-                "rishon lezion",
-                "ashdod",
-                "Beer sheva",
-            };
+            List<string> city = Data.citiesList;
             cityCbox.SelectedIndex = 0;
             cityCbox.ItemsSource = city;
         }
@@ -76,7 +65,9 @@ namespace PartnersMatcher.View.Controls
             bool isKosher = isKosherCB.IsChecked.Value;
             string city = cityCbox.SelectedItem.ToString();
             string description = descTb.Text;
-            vm.addActivity(numOfPartners, city, address, numOfPartners.ToString(), "Apartment", "Apartment", rentalFee, "", petFriendly, isKosher, smokingFriendly, 0, true, description, "", "", "", "", "", false);
+            vm.addActivity(vm.VM_UserConnected, numOfPartners, city, address, numOfPartners.ToString(), "Apartment", "Apartment", rentalFee, "", petFriendly, isKosher, smokingFriendly, 0, true, description, "", "", "", "", "", false);
+            MessageBox.Show("Activity added successfully");
+            this.Visibility = Visibility.Hidden;
         }
 
         private bool checkIfNumber(string rentalFee)

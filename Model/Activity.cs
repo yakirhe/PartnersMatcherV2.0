@@ -10,6 +10,7 @@ namespace PartnersMatcher.Model
     public abstract class Activity
     {
         #region Properties
+
         private string description;
 
         public string Description
@@ -18,15 +19,30 @@ namespace PartnersMatcher.Model
             set { description = value; }
         }
 
+        private int activityNumber;
 
-        private string location;
-
-        public string Location
+        public int ActivityNumber
         {
-            get { return location; }
-            set { location = value; }
+            get { return activityNumber; }
+            set { activityNumber = value; }
         }
 
+
+        private string city;
+
+        public string City
+        {
+            get { return city; }
+            set { city = value; }
+        }
+
+        private string address;
+
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
 
         private int maxUsers;
 
@@ -75,13 +91,24 @@ namespace PartnersMatcher.Model
             get { return pendingList; }
             set { pendingList = value; }
         }
-        #endregion
 
-        public Activity(int maxUsers, string location, List<User> partners, string activityName, string type, double payments, List<User> pendingList,string description)
+        private User activityManager;
+
+        public User ActivityManager
         {
+            get { return activityManager; }
+            set { activityManager = value; }
+        }
+
+        #endregion Properties
+
+        public Activity(int maxUsers, string address, string city, List<User> partners, string activityName, string type, double payments, List<User> pendingList, string description, User activityManager)
+        {
+            this.activityManager = activityManager;
             this.description = description;
             this.maxUsers = maxUsers;
-            this.location = location;
+            this.address = address;
+            this.city = city;
             this.partners = partners;
             this.activityName = activityName;
             this.type = type;

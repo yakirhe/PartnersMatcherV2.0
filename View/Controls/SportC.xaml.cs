@@ -1,4 +1,5 @@
-﻿using PartnersMatcher.ViewModel;
+﻿using PartnersMatcher.Model;
+using PartnersMatcher.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class SportC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public SportC(MyViewModel vm)
         {
@@ -33,7 +34,7 @@ namespace PartnersMatcher.View.Controls
 
         private void initializeCityBox()
         {
-            List<string> cities = new List<string> { "Tel Aviv", "Jerusalem", "Haifa", "Beer Sheva" };
+            List<string> cities = Data.citiesList;
             cityBox.ItemsSource = cities;
         }
 
@@ -48,6 +49,7 @@ namespace PartnersMatcher.View.Controls
             activityBox.ItemsSource = vm.FilteredSports;
             resultsLbl.Visibility = Visibility.Visible;
             activityBox.Visibility = Visibility.Visible;
+            btn.IsEnabled = false;
             btn.Visibility = Visibility.Visible;
         }
 
@@ -58,7 +60,21 @@ namespace PartnersMatcher.View.Controls
                 MessageBox.Show("You need to select the activity");
                 return;
             }
-            MessageBox.Show("You were added to the pending list");
+            SportActivity spAct = (SportActivity)activityBox.SelectedItem;
+            SportDisplayC sportDisplay = new SportDisplayC(spAct, vm);
+            sportDisplay.Show();
+        }
+
+        private void activityBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (activityBox.SelectedIndex != -1)
+            {
+                btn.IsEnabled = true;
+            }
+            else
+            {
+                btn.IsEnabled = false;
+            }
         }
     }
 }

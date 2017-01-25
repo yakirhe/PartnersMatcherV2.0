@@ -48,10 +48,7 @@ namespace PartnersMatcher.View.Controls
             }
             else
             {
-                if (vm.signIn(emailTxt.Text, passwordTxt.Password))
-                {
-                    MessageBox.Show("Connected");
-                }
+                vm.signIn(emailTxt.Text, passwordTxt.Password, vm);
             }
         }
     }

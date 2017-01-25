@@ -9,6 +9,15 @@ namespace PartnersMatcher.Model
     public class TripActivity : Activity
     {
         #region Properties
+
+        private int budget;
+
+        public int Budget
+        {
+            get { return budget; }
+            set { budget = value; }
+        }
+
         private string destination;
 
         public string Destination
@@ -24,7 +33,6 @@ namespace PartnersMatcher.Model
             get { return region; }
             set { region = value; }
         }
-
 
         private string startingDate;
 
@@ -49,10 +57,12 @@ namespace PartnersMatcher.Model
             get { return carNeeded; }
             set { carNeeded = value; }
         }
-        #endregion
 
-        public TripActivity(string region, string destination, string startingDate, string approximateDuration, bool carNeeded, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList, string description) : base(maxUsers, destination, partners, activityName, type, payments, pendingList, description)
+        #endregion Properties
+
+        public TripActivity(string address, string city, int budget, string region, string destination, string startingDate, string approximateDuration, bool carNeeded, int maxUsers, List<User> partners, string activityName, string type, double payments, List<User> pendingList, string description, User activityManager) : base(maxUsers, address, city, partners, activityName, type, payments, pendingList, description, activityManager)
         {
+            this.budget = budget;
             this.destination = destination;
             this.startingDate = startingDate;
             this.approximateDuration = approximateDuration;

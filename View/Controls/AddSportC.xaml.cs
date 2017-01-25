@@ -22,7 +22,7 @@ namespace PartnersMatcher.View.Controls
     /// </summary>
     public partial class AddSportC : UserControl
     {
-        MyViewModel vm;
+        private MyViewModel vm;
 
         public AddSportC(MyViewModel vm)
         {
@@ -68,7 +68,9 @@ namespace PartnersMatcher.View.Controls
             string address = addressTB.Text;
             int numOfPlayers = Int32.Parse(numOfPlayersCB.SelectedItem.ToString());
             string description = descTb.Text;
-            vm.addActivity(numOfPlayers, city, address, "", "sport", "sport", "", "", false, false, false, 0, false, description, sportType, "", "", "", "", false);
+            vm.addActivity(vm.VM_UserConnected, numOfPlayers, city, address, "", "sport", "sport", "", "", false, false, false, 0, false, description, sportType, "", "", "", "", false);
+            MessageBox.Show("Activity added successfully");
+            this.Visibility = Visibility.Hidden;
         }
     }
 }
