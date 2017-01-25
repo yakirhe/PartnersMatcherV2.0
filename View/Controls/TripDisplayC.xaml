@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PartnersMatcher.View.Controls"
         mc:Ignorable="d"
-        Title="TripDisplayC" Height="300" Width="300">
+        d:DesignHeight="300"
+        d:DesignWidth="300"
+        Title="TripDisplayC">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80" />
